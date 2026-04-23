@@ -13,5 +13,6 @@ dependencies:
   - plotly::chart-studio
   - main::plotly
   - cufflinks-py
+  - scikit-learn
   - pip:
     - nbformat>=4.2.0 # Required for plotly in VS Code
