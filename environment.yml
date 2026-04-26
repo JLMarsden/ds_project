@@ -1,18 +1,29 @@
-name: learning
+name: ds_learning
 channels:
-  - defaults
   - conda-forge
+  - defaults
 dependencies:
-  - python=3.13
+  - python=3.12
+  - pip
+  # Core Data Science
   - numpy
   - pandas
   - matplotlib
-  - jupyter
   - seaborn
   - scipy
-  - plotly::chart-studio
-  - main::plotly
-  - cufflinks-py
   - scikit-learn
+  - statsmodels>=0.14  # Fixes the decorator bug found in older versions
+  - setuptools   
+  # Notebook Environment
+  - jupyter
+  - ipykernel
+  - notebook
+  # Utilities
+  - tqdm
+  - openpyxl
+  # Plotly + Cufflinks
+  - plotly
+  - cufflinks-py
   - pip:
+    - ydata-profiling  # Installed via pip to get the latest 4.12+ version
     - nbformat>=4.2.0 # Required for plotly in VS Code
